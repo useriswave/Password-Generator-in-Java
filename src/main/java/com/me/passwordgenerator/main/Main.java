@@ -13,10 +13,8 @@ public class Main {
             if(length <= 0) {
                 break;
             }
-            else {
-                String password = gen.generatePassword(length);
-                System.out.println("Password: " + password);
-            }
+            String password = gen.generatePassword(length);
+            System.out.println("Password: " + password);
         }
 
         System.out.println("Program stopped.");
