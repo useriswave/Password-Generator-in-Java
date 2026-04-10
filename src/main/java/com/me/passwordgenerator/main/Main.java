@@ -13,10 +13,11 @@ public class Main {
             if(length <= 0) {
                 break;
             }
+
             String password = gen.generatePassword(length);
             System.out.println("Password: " + password);
         }
-
+        Prompt.closeScanner();
         System.out.println("Program stopped.");
     }
 }

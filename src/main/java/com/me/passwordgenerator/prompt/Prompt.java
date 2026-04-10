@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Prompt {
 
-    private static Scanner sc = new Scanner(System.in);
+    private static final Scanner SC = new Scanner(System.in);
 
     private Prompt() {}
 
@@ -13,12 +13,16 @@ public class Prompt {
         while(true) {
             try {
                 System.out.print(question + " ");
-                return sc.nextInt();
+                return SC.nextInt();
             }
             catch(InputMismatchException e) {
                 System.out.println("Invalid entry.");
-                sc.nextLine();
+                SC.nextLine();
             }
         }
+    }
+
+    public static void closeScanner() {
+        SC.close();
     }
 }

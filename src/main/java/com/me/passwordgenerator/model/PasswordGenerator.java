@@ -10,16 +10,16 @@ public class PasswordGenerator {
     private final String specialChars = "!@#$%^&*()_+";
     private final String combination = upper + lower + numbers + specialChars;
 
-    private final Random r;
+    private final Random R;
 
     public PasswordGenerator() {
-        this.r = new Random();
+        this.R = new Random();
     }
 
     public String generatePassword(int length) {
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < length; i++) {
-            sb.append(combination.charAt(r.nextInt(combination.length() -1)));
+            sb.append(combination.charAt(R.nextInt(combination.length() -1)));
         }
         return sb.toString();
     }
