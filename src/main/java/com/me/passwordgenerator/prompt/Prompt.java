@@ -22,7 +22,7 @@ public class Prompt {
         }
     }
 
-    public static void closeScanner() {
+    public static void close() {
         SC.close();
     }
 }

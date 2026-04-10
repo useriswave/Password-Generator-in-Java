@@ -17,7 +17,7 @@ public class Main {
             String password = gen.generatePassword(length);
             System.out.println("Password: " + password);
         }
-        Prompt.closeScanner();
+        Prompt.close();
         System.out.println("Program stopped.");
     }
 }
