@@ -10,7 +10,7 @@ public class PasswordGenerator {
     private final String specialChars = "!@#$%^&*()_+";
     private final String combination = upper + lower + numbers + specialChars;
 
-    private Random r;
+    private final Random r;
 
     public PasswordGenerator() {
         this.r = new Random();
